@@ -1,38 +1,246 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.main-container {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: #01182d;
+  background-size: cover;
+  padding: 0.4rem;
+}
+
+.sub-container {
+  background: #4b667d;
+  border-radius: 5px;
+  min-height: 91vh;
+  padding: 1.5rem;
+}
+.sub-container > h1 {
+  margin: 0px;
+  text-align: center;
+  padding: 0rem 0rem 2rem 0rem;
+  font-family: unset;
+  font-weight: bolder;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+form > input {
+  width: 85%;
+  height: 2rem;
+  padding-left: 8px;
+  border-radius: 5px;
+  border: 0px solid;
+  font-family: unset;
+  font-weight: 600;
+  outline: none;
+}
+
+form > button {
+  height: 2rem;
+  width: 30%;
+  border: 0px solid;
+  border-radius: 5px;
+  background: #5d95c6;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  margin-top: 2px;
+}
+
+.sub-container > div {
+  margin-top: 2rem;
+}
+
+.todoitem-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #5d95c6;
+  margin: 0.5rem 0rem;
+  height: 2rem;
+  padding: 7px;
+  border-radius: 5px;
+  color: white;
+}
+
+.todoitem-container > h3 {
+  margin: 0px;
+  font-size: 14px;
+}
+
+.todoitem-container > div {
+  display: flex;
+  align-items: center;
+}
+
+.todoitem-container > div > button {
+  background: transparent;
+  border-width: 0px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.todo-icon {
+  height: 17px;
+  width: 17px;
+}
+
+.todoitem-container > input {
+  width: 70%;
+  height: 2rem;
+  padding-left: 8px;
+  border-radius: 5px;
+  border: 0px solid;
+  font-family: unset;
+  font-weight: 600;
+  outline: none;
+}
+
+.todoitem-container > button {
+  background: #00ff00;
+  color: #100000;
+  border: 0;
+  border-radius: 3px;
+  padding: 4px 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .sub-container > h1 {
+    font-size: 2.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  form > input {
+    height: 2.5rem;
+    font-size: 1rem;
+    width: 70%;
+  }
+
+  form > button {
+    height: 2.5rem;
+    font-size: 1rem;
+    width: 17%;
+  }
+
+  .todoitem-container {
+    height: 2.5rem;
+    width: 90%;
+  }
+
+  .todoitem-container > h3 {
+    font-size: 1rem;
+  }
+
+  .todo-icon {
+    height: 20px;
+    width: 20px;
+  }
+
+  .todoitem-container > input {
+    font-size: 1rem;
+  }
+
+  .todoitem-container > button {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .sub-container > h1 {
+    font-size: 2.6rem;
+  }
+
+  form > input {
+    height: 2.6rem;
+    font-size: 1.1rem;
+    width: 60%;
+  }
+
+  form > button {
+    height: 2.6rem;
+    font-size: 1.1rem;
+    width: 17%;
+  }
+
+  .todoitem-container {
+    height: 2.6rem;
+    width: 80%;
+  }
+
+  .todoitem-container > h3 {
+    font-size: 1.1rem;
+  }
+
+  .todo-icon {
+    height: 22px;
+    width: 22px;
+  }
+
+  .todoitem-container > input {
+    font-size: 1.1rem;
+  }
+
+  .todoitem-container > button {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .sub-container > h1 {
+    font-size: 2.7rem;
+  }
+
+  form > input {
+    height: 2.7rem;
+    font-size: 1.2rem;
+    width: 50%;
+  }
+
+  form > button {
+    height: 2.7rem;
+    font-size: 1.2rem;
+    width: 12%;
+  }
+
+  .todoitem-container {
+    height: 2.7rem;
+    width: 70%;
+  }
+
+  .todoitem-container > h3 {
+    font-size: 1.2rem;
+  }
+
+  .todo-icon {
+    height: 22px;
+    width: 22px;
+  }
+
+  .todoitem-container > input {
+    font-size: 1.2rem;
+  }
+
+  .todoitem-container > button {
+    font-size: 1.2rem;
   }
 }
